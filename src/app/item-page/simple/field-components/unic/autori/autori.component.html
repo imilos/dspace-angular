@@ -1,0 +1,24 @@
+<!-- <div style="word-break: break-word; display: inline-block;" *ngFor="let autor of autori"> -->
+<div style="word-break: break-word; display: inline-block;" *ngFor="let autor of this.autori">
+
+    <a href="/browse/author?value={{autor.name}}&authority={{autor.authority}}"
+        style="border:1px solid #f0f0f0;border-radius:4px;background-color:#f0f0f0;margin:2px;display: inline-block;">{{autor.name}}</a>
+
+    <a *ngIf="autor.orcid" target="_blank" href="https://orcid.org/{{autor.orcid}}">
+        <img style="height:15px;padding-left:5px" src="assets/images/unic/orcid.png" />
+    </a>
+
+    <a *ngIf="autor.ecris" target="_blank" href="https://www.kg.ac.rs/nastavnici_nastavnik.php?ib_je={{autor.ecris}}">
+        <img style="height:15px;padding-left:5px" src="assets/images/unic/unikg.png" />
+    </a>
+
+    <a *ngIf="autor.ecris" target="_blank"
+        href="https://cris.cobiss.net/ecris/sr/sr_latn/researcher/code/{{autor.ecris}}">
+        <img style="height:15px;padding-left:5px" src="assets/images/unic/cris-logo.svg" />
+    </a>
+
+    <a *ngIf="autor.scopus" target="_blank" href="https://www.scopus.com/authid/detail.uri?authorId={{autor.scopus}}">
+        <img style="height:15px;padding-left:5px" src="assets/images/unic/sc.svg" />
+    </a>
+
+</div>
