@@ -1,0 +1,18 @@
+// Override or add CSS variables for your theme here
+
+:root {
+  --ds-header-logo-height: 60px;
+  --ds-banner-text-background: rgba(0, 0, 0, 0.45);
+  --ds-banner-background-gradient-width: 300px;
+  --ds-home-news-link-color: #F89648;
+  --ds-home-news-link-hover-color: #F77B1F;
+  --ds-header-navbar-border-bottom-color: #FAB075;
+  
+  --ds-breadcrumb-max-length: 220px;
+  --ds-login-logo-height: 110px;
+  --ds-login-logo-width: 110px;
+}
+
+.w-65 {
+  width: 65%;
+}
