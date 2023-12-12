@@ -2,9 +2,9 @@
 <div class="row" *ngIf="iiifEnabled">
   <div class="col-12">
     <ds-mirador-viewer id="iiif-viewer"
-                   [object]="object"
-                   [searchable]="iiifSearchEnabled"
-                   [query]="iiifQuery$ | async">
+                       [object]="object"
+                       [searchable]="iiifSearchEnabled"
+                       [query]="iiifQuery$ | async">
     </ds-mirador-viewer>
   </div>
 </div>
@@ -27,47 +27,53 @@
     <ds-themed-item-page-file-section [item]="object"></ds-themed-item-page-file-section>
     <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
     <ds-themed-metadata-representation-list class="ds-item-page-mixed-author-field"
-      [parentItem]="object"
-      [itemType]="'Person'"
-      [metadataFields]="['dc.contributor.author', 'dc.creator']"
-      [label]="'relationships.isAuthorOf' | translate">
+                                            [parentItem]="object"
+                                            [itemType]="'Person'"
+                                            [metadataFields]="['dc.contributor.author', 'dc.creator']"
+                                            [label]="'relationships.isAuthorOf' | translate">
     </ds-themed-metadata-representation-list>
     <ds-generic-item-page-field [item]="object"
-      [fields]="['journal.title']"
-      [label]="'item.page.journal-title'">
+                                [fields]="['journal.title']"
+                                [label]="'item.page.journal-title'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
-      [fields]="['journal.identifier.issn']"
-      [label]="'item.page.journal-issn'">
+                                [fields]="['journal.identifier.issn']"
+                                [label]="'item.page.journal-issn'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
-      [fields]="['journalvolume.identifier.name']"
-      [label]="'item.page.volume-title'">
+                                [fields]="['journalvolume.identifier.name']"
+                                [label]="'item.page.volume-title'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
-      [fields]="['dc.publisher']"
-      [label]="'item.page.publisher'">
+                                [fields]="['dc.publisher']"
+                                [label]="'item.page.publisher'">
     </ds-generic-item-page-field>
   </div>
   <div class="col-xs-12 col-md-6">
+
+    <!-- UNIC komponente -->
+    <ds-autori [dc_autori]="this.object.metadata['dc.contributor.author']"></ds-autori>
+    <ds-email-prijava [item_metadata]="this.object.metadata"></ds-email-prijava>
+    <!-- UNIC komponente -->
+
     <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
     <ds-generic-item-page-field [item]="object"
-      [fields]="['dc.description']"
-      [label]="'item.page.description'">
+                                [fields]="['dc.description']"
+                                [label]="'item.page.description'">
     </ds-generic-item-page-field>
 
     <ds-generic-item-page-field [item]="object"
-      [fields]="['dc.subject']"
-      [separator]="', '"
-      [label]="'item.page.subject'">
+                                [fields]="['dc.subject']"
+                                [separator]="', '"
+                                [label]="'item.page.subject'">
     </ds-generic-item-page-field>
     <ds-generic-item-page-field [item]="object"
-      [fields]="['dc.identifier.citation']"
-      [label]="'item.page.citation'">
+                                [fields]="['dc.identifier.citation']"
+                                [label]="'item.page.citation'">
     </ds-generic-item-page-field>
     <ds-item-page-uri-field [item]="object"
-      [fields]="['dc.identifier.uri']"
-      [label]="'item.page.uri'">
+                            [fields]="['dc.identifier.uri']"
+                            [label]="'item.page.uri'">
     </ds-item-page-uri-field>
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
     <div>

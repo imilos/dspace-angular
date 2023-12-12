@@ -61,9 +61,9 @@
                 "bundleName": "dspace-theme"
               },
               {
-                "input": "src/themes/scidar/styles/theme.scss",
+                "input": "src/themes/ikbks/styles/theme.scss",
                 "inject": false,
-                "bundleName": "scidar-theme"
+                "bundleName": "ikbks-theme"
               }
             ],
             "scripts": [],

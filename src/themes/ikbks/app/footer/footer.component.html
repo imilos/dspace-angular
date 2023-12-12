@@ -1,0 +1,123 @@
+<footer class="text-lg-start">
+  <div *ngIf="showTopFooter" class="top-footer">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <h5 class="text-uppercase">{{ 'footer.title.ikbks' | translate }}</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a routerLink="/community-list" class="">{{ 'footer.link.community-list' | translate }}</a>
+            </li>
+            <li>
+              <a routerLink="/browse/dateissued" class="">{{ 'footer.link.dateissued' | translate }}</a>
+            </li>
+            <li>
+              <a routerLink="/browse/author" class="">{{ 'footer.link.author' | translate }}</a>
+            </li>
+            <li>
+              <a routerLink="/browse/title" class="">{{ 'footer.link.title' | translate }}</a>
+            </li>
+            <li>
+              <a routerLink="/browse/subject" class="">{{ 'footer.link.subject' | translate }}</a>
+            </li>
+            <li>
+              <a routerLink="/browse/srsc" class="">{{ 'footer.link.srsc' | translate }}</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+<!--          <h5 class="text-uppercase">{{ 'footer.title.university' | translate }}</h5>-->
+
+<!--          <ul class="list-unstyled mb-0">-->
+<!--            <li>-->
+<!--              <a href="{{ 'footer.link.ub_url' | translate }}" class="" target="_blank">{{ 'footer.link.ub' | translate }}</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="{{ 'footer.link.enauka_url' | translate }}" class="" target="_blank">{{ 'footer.link.enauka' | translate }}</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="{{ 'footer.link.doi_url' | translate }}" class="" target="_blank">{{ 'footer.link.doi' | translate }}</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="{{ 'footer.link.eteze_url' | translate }}" class="" target="_blank">{{ 'footer.link.eteze' | translate }}</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="{{ 'footer.link.phaidra_url' | translate }}" class="" target="_blank">{{ 'footer.link.phaidra' | translate }}</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a href="{{ 'footer.link.cobiss_url' | translate }}" class="" target="_blank">{{ 'footer.link.cobiss' | translate }}</a>-->
+<!--            </li>-->
+
+<!--          </ul>-->
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">{{ 'footer.title.tools' | translate }}</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a routerLink="/login" class="">{{ 'login.title' | translate }}</a>
+            </li>
+            <li>
+              <a routerLink="/statistics" class="">{{ 'nav.statistics.header' | translate }}</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="{{ 'footer.link.unikg_url' | translate }}" target="_blank" title="{{ 'footer.link.unikg' | translate }}"><img src="assets/ikbks/images/ikbks-logo.png" class="img-fluid w-65" alt="{{ 'footer.link.ikbks_logo' | translate }}"></a>
+            </li>
+          </ul>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+    </div>
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="bottom-footer p-1 d-flex justify-content-center align-items-center text-white">
+    <div class="content-container">
+      <p class="m-0">
+        <a class="text-white" href="{{ 'footer.link.unic_url' | translate }}" target="_blank">{{ 'footer.link.unic' | translate }}</a> • {{ 'footer.copyright' | translate:{year: dateObj | date:'y'} }} • <a class="text-white" href="https://kg.ac.rs/" target="_blank">{{ 'footer.link.unikg' | translate }}</a>
+      </p>
+      <ul class="footer-info list-unstyled small d-flex justify-content-center mb-0">
+        <li>
+            <a class="text-white" href="javascript:void(0);"
+             (click)="showCookieSettings()">{{ 'footer.link.cookies' | translate }}</a>
+        </li>
+        <li *ngIf="showPrivacyPolicy">
+          <a class="text-white"
+             routerLink="info/privacy">{{ 'footer.link.privacy-policy' | translate }}</a>
+        </li>
+        <li *ngIf="showEndUserAgreement">
+          <a class="text-white"
+             routerLink="info/end-user-agreement">{{ 'footer.link.end-user-agreement' | translate }}</a>
+        </li>
+        <li *ngIf="showSendFeedback$ | async">
+          <a class="text-white"
+             routerLink="info/feedback">{{ 'footer.link.feedback' | translate }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Copyright -->
+</footer>

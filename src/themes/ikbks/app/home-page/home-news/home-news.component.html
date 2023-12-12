@@ -1,0 +1,24 @@
+<div class="background-image-container">
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="d-flex flex-wrap">
+        <div>
+          <h1 class="display-3">{{ 'home.news.title' | translate }}</h1>
+          <p class="lead">{{ 'home.news.subtitle' | translate }}</p>
+        </div>
+      </div>
+      <p>{{ 'home.news.description' | translate }}</p>
+      <br>
+      <p><b>{{ 'home.news.features' | translate }}</b></p>
+      <ul>
+        <li>{{ 'home.news.listing_1.1' | translate }} <a href="{{ 'home.news.listing_1.4' | translate }}" target="_blank">{{ 'home.news.listing_1.2' | translate }}</a> {{ 'home.news.listing_1.3' | translate }}</li>
+        <li>{{ 'home.news.listing_2.1' | translate }} <a href="{{ 'home.news.listing_2.4' | translate }}" target="_blank">{{ 'home.news.listing_2.2' | translate }}</a> {{ 'home.news.listing_2.3' | translate }}</li>
+      </ul>
+    </div>
+  </div>
+  <picture class="background-image">
+    <source type="image/jpg" srcset="assets/ikbks/images/{{myPix[randomNumber]}} 2000w, assets/ikbks/images/{{myPix[randomNumber]}} 1200w, assets/ikbks/images/{{myPix[randomNumber]}} 768w">
+    <img alt="" [src]="'assets/ikbks/images/banner.jpg'"/><!-- without the []="''" Firefox downloads both the fallback and the resolved image -->
+  </picture>
+  <small class="credits"></small>
+</div>

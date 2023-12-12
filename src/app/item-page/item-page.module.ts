@@ -61,9 +61,6 @@ import {
   ThemedFullFileSectionComponent
 } from './full/field-components/file-section/themed-full-file-section.component';
 
-import { EmailPrijavaComponent } from './simple/field-components/unic/email-prijava/email-prijava.component';
-import { AutoriComponent } from './simple/field-components/unic/autori/autori.component';
-
 const ENTRY_COMPONENTS = [
   // put only entry components that use custom decorator
   PublicationComponent,
@@ -106,9 +103,6 @@ const DECLARATIONS = [
   ItemAlertsComponent,
   ThemedItemAlertsComponent,
   BitstreamRequestACopyPageComponent,
-  // UNIC
-  AutoriComponent,
-  EmailPrijavaComponent,
 ];
 
 @NgModule({

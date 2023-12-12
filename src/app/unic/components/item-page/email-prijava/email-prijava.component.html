@@ -1,0 +1,8 @@
+<div class="col-md-12" *ngIf="user_email">
+    <form [formGroup]="reportErrorInItemForm" (submit)="reportErrorInItem()" class="form-group">
+        <textarea class="form-control" id="note" formControlName="note" placeholder="{{'unic.item.note.note-to-admin' | translate}}" rows="3"></textarea>
+        <button type="submit" class="btn btn-primary">{{'unic.item.note.report' | translate}}</button>
+    </form>
+</div>
+
+
